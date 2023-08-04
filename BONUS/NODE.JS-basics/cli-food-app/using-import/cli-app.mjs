@@ -35,14 +35,21 @@ mainLoop() */
 
 
 
-import { menu, printMenu, printMessage } from "./food/index.mjs";
+import { menu, printMenu, printMessage } from "./food/index.mjs"
 
+// user input este un string, to convert it in integer number, putem folosi functia parseInt()
 function mainLoop() {
   printMenu( menu, (option) => {
     console.log("You've chosen",option)
     if(option != ""){
       //HW4: !!! string input -> integer number
       //HW5: +check -> error -> inexistant option
+      const chosenOption = parseInt(option)
+      if (!isNaN(chosenOption) && chosenOption >= 1 && chosenOption <= 3) {
+        console.log("Chosen option number:", chosenOption)
+      } else {
+        console.log("Inexistant option! Please choose a valid option.")
+      }
       setTimeout(mainLoop, 500)
     }
     
@@ -50,5 +57,5 @@ function mainLoop() {
 }
 mainLoop() 
 
-printMenu(menu);
-printMessage("Choose an option");
+printMenu(menu)
+printMessage("Choose an option")

@@ -16,13 +16,12 @@ module.exports.menu =
   new Item("pizza", 40.00)
 ] */
 
-import Item from "./Item.mjs";
+import Item from "./Item.mjs"
 
 export const menu = [
-  new Item("salad", 15.0),
-  new Item("soup", 25.0),
-  new Item("pizza", 40.0),
-  // Add more items here if needed
-];
+  new Item(1,"salad", 15.00),
+  new Item(2,"soup", 25.00),
+  new Item(3,"pizza", 40.00)
+]
 
 
