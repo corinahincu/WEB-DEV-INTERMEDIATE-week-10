@@ -7,9 +7,11 @@ const {HOST,PATH,KEY} = require('./config.json')
 //prepare request
 const req = http.request({
   host: HOST,
-  path: PATH
+  path: PATH,
+  port: 80,
+  method:'GET'
 })
-req.end()
+/* req.end()
 
 req.on("connect", () => {
   console.log('<<< got connected!')
@@ -17,7 +19,7 @@ req.on("connect", () => {
 
 req.on('information', () => {
   console.log(`>>> got some info!`)
-})
+}) */
 
 // does this send a request?
 // 1) node request built in
