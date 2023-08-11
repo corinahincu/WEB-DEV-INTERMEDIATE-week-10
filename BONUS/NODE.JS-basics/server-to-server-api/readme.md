@@ -69,3 +69,8 @@ x------|-------|--------|----- .... -------|------>
 
 app (client) -------> request ------> weather server API
 event <     <-------- response <----- ??
+
+
+-------------------------------------------------------
+sudo watch -n 1 "netstat --tcp -pnW | grep :80" - la linux
+sudo tcpdump -s 0 'tcp dst port 80' - la linux , la ios ? trebuie sa caut !
