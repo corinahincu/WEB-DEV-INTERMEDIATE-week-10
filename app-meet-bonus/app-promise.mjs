@@ -30,7 +30,6 @@ const getDefinition = (word) => {
 }
 
 
-// promises
 const printData = (word) => {
   getDefinition(word)
     .then(json => {
